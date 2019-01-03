@@ -17,11 +17,17 @@ from django.contrib import admin
 #from django.urls import path
 from django.conf.urls import url, include
 from rest_framework.routers import DefaultRouter
-from quant_model import views
+from quant_model import views as quant_model_views
+from text_model import views as text_model_views
+from model_summary import views as model_summary_views
 
 router = DefaultRouter()
-router.register(r'quant_model', views.QuantModelViewSet)
+router.register(r'quant_model', quant_model_views.QuantModelViewSet)
+router.register(r'text_model', text_model_views.TextModelViewSet)
+router.register(r'model_summary', model_summary_views.ModelSummaryViewSet)
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^api/', include(router.urls))
+    url(r'^api/v1.0/', include(router.urls))
+    
 ]
