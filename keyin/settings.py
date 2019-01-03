@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'quant_model',
     'text_model',
+    'model_summary',
 ]
 
 MIDDLEWARE = [
