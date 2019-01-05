@@ -8,7 +8,7 @@ class ModelSummary(models.Model):
     loss = models.FloatField(null=True, blank=True)
     accuracy = models.FloatField(null=True, blank=True)
     model_path = models.CharField(max_length=100, null=True, blank=True)
-    checksum = models.CharField(max_length=255, unique=True, null=True)
+    checksum = models.CharField(max_length=255, unique=True, null=True, blank=True)
     last_modify_date = models.DateTimeField(auto_now=True)
     created = models.DateTimeField(auto_now_add=True)
 
