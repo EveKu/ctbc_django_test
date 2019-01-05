@@ -9,6 +9,7 @@ class TextModel(models.Model):
     use_data_end = models.DateField()
     #result_sign = models.CharField(max_length=1, null=True, blank=True)
     result = models.CharField(max_length=10, null=True, blank=True)
+    checksum = models.CharField(max_length=255, unique=True, null=True, blank=True)
     last_modify_date = models.DateTimeField(auto_now=True)
     created = models.DateTimeField(auto_now_add=True)
 
