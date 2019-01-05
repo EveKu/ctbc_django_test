@@ -20,7 +20,7 @@ class SummaryHist(models.Model):
     summary_hist = models.ForeignKey(TextModel, related_name = 'summary', on_delete=models.CASCADE)
     history_date = models.DateField(null=True, blank=True)
     history_result = models.CharField(max_length=2, null=True, blank=True)
-    history_count = models.CharField(max_length=5, null=True, blank=True)
+    history_count = models.IntegerField(null=True, blank=True)
 
     class Meta:
         db_table = "text_model_summary_hist_table"

@@ -5,8 +5,8 @@ class ModelSummary(models.Model):
     update = models.DateField()
     model_type = models.CharField(max_length=2, null=True, blank=True)
     target_symbol = models.CharField(max_length=10, null=True, blank=True)
-    loss = models.CharField(max_length=10, null=True, blank=True)
-    accuracy = models.CharField(max_length=10, null=True, blank=True)
+    loss = models.FloatField(null=True, blank=True)
+    accuracy = models.FloatField(null=True, blank=True)
     last_modify_date = models.DateTimeField(auto_now=True)
     created = models.DateTimeField(auto_now_add=True)
 
